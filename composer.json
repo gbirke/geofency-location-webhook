@@ -1,0 +1,14 @@
+{
+    "name": "gbirke/geofency-location-webhook",
+    "description": "FHEM Geofency webhook",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gabriel Birke",
+            "email": "gb@birke-software.de"
+        }
+    ],
+    "require": {
+        "symfony/http-foundation": "2.4.*"
+    }
+}
