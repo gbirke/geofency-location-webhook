@@ -1,13 +1,16 @@
 FHEM Presence tracker with Geofency webhook
 ===========================================
 
-Receive JSON POST request from the [Geofency iOS app][1] and write the enter/exit event to a file.
-A command line utility is also provided and can be called from FHEM to check the status.
+This code enables [FHEM][1] PRESENCE state through [Geofencing][5] with the [Geofency iOS app][2].
+
+It consists of:
+* A webhook (server script) that receives JSON POST requests from the Geofency app and writes the enter/exit events to a file.
+* A command line utility that is called from FHEM to generate presence state (1 or 0) from the data.
 
 System requirements
 -------------------
 * PHP 5.3 or better
-* [Composer][2]
+* [Composer][3]
 
 Installation
 ------------
@@ -23,7 +26,7 @@ Installation
 
 Security considerations
 -----------------------
-Since the webhook is open for everyone, you should [protect it with a .htaccess file][3] and enter the data in Geofency.
+Since the webhook is open for everyone, you should [protect it with a .htaccess file][4] and enter the data in Geofency.
 
 Ideas for future expansion
 --------------------------
@@ -32,6 +35,8 @@ Ideas for future expansion
 - Differentiate between several beacon IDs for a more general use case of the webhook
 - Store all events in database (for statistics/debugging)
 
-[1]: http://www.geofency.com/
-[2]: https://getcomposer.org/
-[3]: http://lmgtfy.com/?q=password+protection+.htaccess
+[1]: http://fhem.de/
+[2]: http://www.geofency.com/
+[3]: https://getcomposer.org/
+[4]: http://lmgtfy.com/?q=password+protection+.htaccess
+[5]: https://en.wikipedia.org/wiki/Geo-fence
