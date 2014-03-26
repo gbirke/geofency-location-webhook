@@ -7,6 +7,8 @@ It consists of:
 * A webhook (server script) that receives JSON POST requests from the Geofency app and writes the enter/exit events to a file.
 * A command line utility that is called from FHEM to generate presence state (1 or 0) from the data.
 
+This script creates a more stable presence than the native "GEOFANCY" presence feature of FHEM: Since the iBeacon has a limited range, the app creates many "Enter" and "Exit" events. These events are "smoothed over" by this app by using a threshold for the absence.
+
 System requirements
 -------------------
 * PHP 5.3 or better
